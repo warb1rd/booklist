@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 
 class Booklist extends Component{
 // maps over an array of books and for each book in the array show the book title
