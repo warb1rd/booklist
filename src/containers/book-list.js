@@ -6,7 +6,7 @@ class BookList extends Component{
 	renderList(){
 		return this.props.books.map((book) => {
 			return(
-					<li key={book.title} className="list-group-item"></li>
+					<li key={book.title} className="list-group-item">{book.title}</li>
 			)
 		})
 	}
@@ -14,7 +14,7 @@ class BookList extends Component{
 		return (
 			<ul className="list-group col-sm-4">
 			{/* Helper function */}
-					{this.renderList()}
+				{this.renderList()}
 			</ul>
 		)
 	}
