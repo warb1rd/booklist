@@ -20,9 +20,9 @@ class BookList extends Component{
 	}
 }
 
-function mapStateToProps(state){                        // Take app state as an argument and whatever gets returned will show up as props inside booklist container
+function mapStateToProps(state){                        //Take app state as an argument and whatever gets returned will show up as props inside booklist container
   return {
-    books: state.books                                  // Glue between react and redux. This return will show up as props
+    books: state.books                                  //Glue between react and redux. This return will show up as props
   }
 }
 
@@ -30,5 +30,5 @@ export default connect(mapStateToProps)(BookList)
 
 //Container or smart components that have direct connection to state managed by redux (react-redux library - forms bridge between react and redux)
 
-// state contains array of books and active book
+//State contains array of books and active book
 //Containers are link between redux and react done with mapsStateToProps function
