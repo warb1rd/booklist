@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectBook } from '../actions/index.js';
+import { bindActionCreaters} from 'redux';
 
 class BookList extends Component{
 // maps over an array of books and for each book in the array show the book title
@@ -26,7 +28,11 @@ function mapStateToProps(state){                        //Take app state as an a
   }
 }
 
-export default connect(mapStateToProps)(BookList)           
+function mapDispatchToProps(dispatch){
+	return bindActionCreaters({ selectBook: selectBook }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList)           
 
 //Container or smart components that have direct connection to state managed by redux (react-redux library - forms bridge between react and redux)
 
