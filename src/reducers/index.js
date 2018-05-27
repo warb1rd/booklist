@@ -5,5 +5,6 @@ const rootReducer = combineReducers({
   books: BooksReducer
 });
 
-export default rootReducer;
- 
+export default rootReducer; 
+
+//action creater is a function that returns an object. 
