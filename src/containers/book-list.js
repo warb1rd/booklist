@@ -22,13 +22,13 @@ class BookList extends Component{
 	}
 }
 
-function mapStateToProps(state){                        //Take app state as an argument and whatever gets returned will show up as props inside booklist container
-  return {
-    books: state.books                                  //Glue between react and redux. This return will show up as props
+function mapStateToProps(state){                        								// Take app state as an argument and whatever gets returned will show up as props inside booklist container
+  return {																							
+    books: state.books                                  								// Glue between react and redux. This return will show up as props
   }
 }
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch){																	// Whenever selectBook is called, the result should be passed to all of the reducers
 	return bindActionCreaters({ selectBook: selectBook }, dispatch)
 }
 
